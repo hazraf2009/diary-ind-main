@@ -56,7 +56,6 @@ def login():
             
             #Tugas #4. Menerapkan otorisasi
             users_db = User.query.all()
-            users_db = User.query.all()
             for user in users_db:
                 if form_login == user.login and form_password == user.password:
                     return redirect('/index')
@@ -66,6 +65,7 @@ def login():
         
         else:
             return render_template('login.html')
+        
 
             
 
